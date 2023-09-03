@@ -1,0 +1,60 @@
+# some directories
+dotfiles/
+wekafiles/
+node_modules/
+chafa-1.12.5/
+vcpkg/
+package-lock.json
+
+
+# Package Files
+.cargo/
+.cache/
+.codeium/
+.conan2/
+.conda/
+.cupy/
+.dotnet/
+.ipython/
+.jukit/
+.jupyter/
+.local/
+.m2/
+.mozilla/
+.node_repl_history
+.npm/
+.nv/
+.nvm/
+.p10k.zsh
+.python_history
+.rustup/
+.ssh/
+.tmux/
+.vcpkg/
+
+# ide server
+.vscode-server/
+.cursor-server/
+
+# Somefiles
+.bash_history
+.bash_logout
+.histfile
+.profile
+.sudo_as_admin_successful
+.viminfo
+.wget-hsts
+.Xauthority
+.zcompdump*
+.zsh_history
+.zshrc.pre-oh-my-zsh
+
+# Files under .config
+.config/configstore/
+.config/goa-1.0/
+.config/lazygit/
+.config/TabNine/
+.config/github-copilot/
+.config/htop/
+.config/matplotlib/
+.config/pulse/
