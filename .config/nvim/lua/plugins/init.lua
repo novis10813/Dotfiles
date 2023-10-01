@@ -34,7 +34,6 @@ require("lazy").setup({
         end,
         dependencies = {
             "nvim-treesitter/nvim-treesitter-textobjects",
-            "HiPhish/nvim-ts-rainbow2",
             {
                 "windwp/nvim-ts-autotag",
                 event = "InsertEnter",
@@ -60,12 +59,11 @@ require("lazy").setup({
     },
     -- the theme
     {
-        "catppuccin/nvim",
-        name = "catppuccin",
+        "ellisonleao/gruvbox.nvim",
         priority = 1000,
         lazy = false,
         config = function()
-            vim.cmd([[colorscheme catppuccin]])
+            vim.cmd([[colorscheme gruvbox]])
             require("plugins/colorscheme")
         end,
     },
@@ -245,6 +243,7 @@ require("lazy").setup({
     -- indent
     {
         "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
         dependencies = { "nvim-treesitter/nvim-treesitter" },
         config = function()
             require("plugins/indent")
@@ -426,8 +425,21 @@ require("lazy").setup({
     },
     -- select virtual environment for python
     {
-        "AckslD/swenv.nvim",
-        ft = "python",
+        "linux-cultist/venv-selector.nvim",
+        dependencies = {
+            "neovim/nvim-lspconfig",
+            "nvim-telescope/telescope.nvim",
+            "mfussenegger/nvim-dap-python",
+        },
+        opts = {
+            -- add any options here
+        },
+        ft = { "python" },
+        event = "VeryLazy",
+        keys = {
+            "<leader>vs",
+            "<cmd>:VenvSelector<cr>",
+        },
     },
     -- move line and block up and down
     { "matze/vim-move" },
@@ -451,5 +463,34 @@ require("lazy").setup({
     {
         "RRethy/vim-illuminate",
         event = "VeryLazy",
+    },
+    {
+        "hiphish/rainbow-delimiters.nvim",
+        event = "VeryLazy",
+        config = function()
+            local rainbow_delimiters = require("rainbow-delimiters")
+            vim.g.rainbow_delimiters = {
+                strategy = {
+                    [""] = rainbow_delimiters.strategy["global"],
+                    vim = rainbow_delimiters.strategy["local"],
+                },
+                query = {
+                    [""] = "rainbow-delimiters",
+                    lua = "rainbow-blocks",
+                },
+                highlight = {
+                    "RainbowDelimiterRed",
+                    "RainbowDelimiterYellow",
+                    "RainbowDelimiterBlue",
+                    "RainbowDelimiterOrange",
+                    "RainbowDelimiterGreen",
+                    "RainbowDelimiterViolet",
+                    "RainbowDelimiterCyan",
+                },
+            }
+        end,
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+        },
     },
 })

@@ -20,12 +20,6 @@ treesitter.setup({
             node_decremental = "<BS>",
         },
     },
-    -- rainbow brackets
-    rainbow = {
-        enable = true,
-        query = "rainbow-parens",
-        strategy = require("ts-rainbow").strategy.global,
-    },
     textobjects = {
         select = {
             enable = true,
