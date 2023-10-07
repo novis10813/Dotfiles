@@ -5,6 +5,7 @@ node_modules/
 chafa-1.12.5/
 vcpkg/
 package-lock.json
+scikit_learn_data/
 
 
 # Package Files
@@ -18,6 +19,7 @@ package-lock.json
 .ipython/
 .jukit/
 .jupyter/
+.keras/
 .local/
 .m2/
 .mozilla/
@@ -32,6 +34,7 @@ package-lock.json
 .ssh/
 .tmux/
 .vcpkg/
+.vscode/
 
 # ide server
 .vscode-server/
