@@ -8,7 +8,7 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
+# Path to youdatar oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -132,4 +132,14 @@ export NVM_DIR="$HOME/.nvm"
 . "$HOME/.cargo/env"
 conda activate rl_env
 quote | cowsay
+
+# use git for version control
 alias config='/usr/bin/git --git-dir=/home/novis/dotfiles --work-tree=/home/novis'
+
+# libtorch
+export LIBTORCH_PATH=/opt/libtorch
+
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+# export PATH=$PATH:/usr/local/cuda/bin
+# export CUDA_HOME=/usr/local/cuda
+alias r="radian"

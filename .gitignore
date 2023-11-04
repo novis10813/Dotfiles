@@ -6,6 +6,10 @@ chafa-1.12.5/
 vcpkg/
 package-lock.json
 scikit_learn_data/
+R/
+nltk_data/
+snap/
+cudnn-linux-x86_64-8.7.0.84_cuda11-archive/
 
 
 # Package Files
@@ -16,10 +20,13 @@ scikit_learn_data/
 .conda/
 .cupy/
 .dotnet/
+.ekphrasis/
 .ipython/
 .jukit/
 .jupyter/
 .keras/
+.kaggle/
+.lesshst
 .local/
 .m2/
 .mozilla/
@@ -29,12 +36,15 @@ scikit_learn_data/
 .nvm/
 .oh-my-zsh/
 .p10k.zsh
+.pdbhistory
 .python_history
+.radian_history
 .rustup/
 .ssh/
 .tmux/
 .vcpkg/
 .vscode/
+.vscode-R/
 
 # ide server
 .vscode-server/

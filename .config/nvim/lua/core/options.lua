@@ -40,4 +40,4 @@ opt.iskeyword:append("-")
 
 -- appearance
 opt.termguicolors = true
-opt.background = "light"
+opt.background = "dark"
